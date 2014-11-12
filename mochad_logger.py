@@ -23,15 +23,18 @@ from twisted.internet import reactor
 from twisted.internet.protocol import ReconnectingClientFactory
 from twisted.protocols.basic import LineReceiver
 
+# Dont write pyc files
+sys.dont_write_bytecode = True
+
 class MochadLogger(LineReceiver):
     """ Receives Messages from Mochad Server and logs the data"""
     delimiter = '\n'
 
-    def __init__(self, logfile, interval):
+    def __init__(self, logfile, rotate):
         # Attempt to set up the logger with specified log target
         try:
             open(LOG_TARGET, "a").close()
-            hdlr = logging.handlers.TimedRotatingFileHandler(logfile, when='M', interval=interval , backupCount=5)
+            hdlr = logging.handlers.RotatingFileHandler(logfile, maxBytes=500000, backupCount=rotate)
         except IOError:
             print("Unable to log to %s" % target)
             exit
@@ -81,11 +84,11 @@ if __name__ == "__main__":
     HOSTNAME = config.get('MochadServer','host')
     PORT = int(config.get('MochadServer','port'))
     LOG_TARGET = config.get('Logging','logfile')
-    LOG_PERIOD = int(config.get('Logging','RotationPeriod'))
+    ROTATE_NUM = int(config.get('Logging','rotate'))
     print "Connecting to ",HOSTNAME,PORT
     print "Writing logs to ",LOG_TARGET
 
-    mochad_logger = MochadLogger(LOG_TARGET, LOG_PERIOD)
+    mochad_logger = MochadLogger(LOG_TARGET, ROTATE_NUM)
     connection_manager = MochadConnectionManager(mochad_logger)
     reactor.connectTCP(HOSTNAME, PORT, connection_manager)
     reactor.run()
