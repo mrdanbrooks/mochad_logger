@@ -1,0 +1,9 @@
+# Copy to /etc/init/mochad_logger.conf
+# run initctl reload-configuration
+
+description "mochad_logger - A Logging Utility for Mochad"
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+exec /usr/local/bin/mochad_logger
