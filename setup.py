@@ -11,7 +11,7 @@ setup(name='mochad_logger',
       author_email='dan@cs.uml.edu',
       url='http://www.github.com/mrdanbrooks/mochad_logger',
       scripts=['mochad_logger'],
-#       data_files=[('/etc/mochad_logger',['config/mochad_logger.conf']),
-#                   ('/etc/init',['debian/mochad_logger.upstart'])],
-#       install_requires=['setuptools', 'twisted']
+      data_files=[('/etc/mochad_logger',['config/mochad_logger.conf']),
+                  ('/etc/init',['debian/mochad_logger.upstart'])],
+      install_requires=['twisted']
       )
