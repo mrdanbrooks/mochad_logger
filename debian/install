@@ -1,3 +1,0 @@
-mochad_logger usr/local/bin/
-config/mochad_logger.conf etc/mochad_logger/
-debian/mochad_logger.upstart etc/init/
