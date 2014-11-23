@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Trigger Upstart Configuration
+# initctl reload-configuration
+
+# Trigger Udev
+udevadm control --reload-rules

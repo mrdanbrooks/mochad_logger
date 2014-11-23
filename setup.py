@@ -1,8 +1,5 @@
 #!/usr/bin/env python
-
-# from distutils.core import setup
 from setuptools import setup
-
 
 setup(name='mochad_logger',
       version='0.0.2',
@@ -12,6 +9,6 @@ setup(name='mochad_logger',
       url='http://www.github.com/mrdanbrooks/mochad_logger',
       scripts=['mochad_logger'],
       data_files=[('/etc/mochad_logger',['config/mochad_logger.conf']),
-                  ('/etc/init',['debian/mochad_logger.upstart'])],
+                  ('/etc/udev/rules.d',['debian/91-mochad-logger.rules'])],
       install_requires=['twisted']
       )
