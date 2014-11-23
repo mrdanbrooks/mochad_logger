@@ -36,8 +36,8 @@ class MochadLogger(LineReceiver):
             open(LOG_TARGET, "a").close()
             hdlr = logging.handlers.RotatingFileHandler(logfile, maxBytes=500000, backupCount=rotate)
         except IOError:
-            print("Unable to log to %s" % target)
-            exit
+            print("Unable to open %s for logging, exiting." % logfile)
+            sys.exit(1)
         self.logger = logging.getLogger("Mochad")
         self.logger.addHandler(hdlr)
         logging.basicConfig(level=logging.DEBUG)
