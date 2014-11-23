@@ -3,25 +3,16 @@ mochad_logger
 
 A logging daemon for mochad.
 
+
 Installation
 ------------
-Clone the git repository
+Download the debian installer from [github](https://github.com/mrdanbrooks/mochad_logger/releases/download/0.0.2/mochad-logger.deb)
+
+Install the package using the following commands
 
 ```bash
-$ git clone https://github.com/mrdanbrooks/mochad_logger.git
-```
-
-The module `mochad_logger` can be used by itself from this directory, or you can install it. 
-Installation requires setuptools. In ubuntu you can install setuptools using 
-
-```bash
-$ sudo apt-get install python-setuptools
-```
-
-Then you can install mochad_logger using
-
-```bash
-$ sudo python setup.py install
+$ sudo dpkg -i --force-depends mochad-logger.deb
+$ sudo apt-get -f install
 ```
 
 **Note:** This does not install mochad itself. For information about installing mochad see https://github.com/njh/mochad.

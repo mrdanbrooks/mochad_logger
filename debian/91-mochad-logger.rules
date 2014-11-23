@@ -1,2 +1,2 @@
-SUBSYSTEM=="usb", ATTRS{idVendor}=="0bc7", ATTRS{idProduct}=="0001", ACTION=="add", RUN+="/usr/local/bin/mochad_logger --config /etc/mochad_logger/mochad_logger.conf"
-SUBSYSTEM=="usb", ATTRS{idVendor}=="0bc7", ATTRS{idProduct}=="0002", ACTION=="add", RUN+="/usr/local/bin/mochad_logger --config /etc/mochad_logger/mochad_logger.conf"
+SUBSYSTEM=="usb", ATTRS{idVendor}=="0bc7", ATTRS{idProduct}=="0001", ACTION=="add", RUN+="/usr/local/bin/mochad_logger /etc/mochad_logger/mochad_logger.conf"
+SUBSYSTEM=="usb", ATTRS{idVendor}=="0bc7", ATTRS{idProduct}=="0002", ACTION=="add", RUN+="/usr/local/bin/mochad_logger /etc/mochad_logger/mochad_logger.conf"
