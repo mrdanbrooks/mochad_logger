@@ -6,7 +6,7 @@ A logging daemon for mochad.
 
 Installation
 ------------
-Download the debian installer from [github](https://github.com/mrdanbrooks/mochad_logger/releases/download/0.0.4/mochad-logger.deb)
+Download the latest debian installer from [github](https://github.com/mrdanbrooks/mochad_logger/releases/)
 
 Install the package using the following commands
 
