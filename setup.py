@@ -2,7 +2,7 @@
 from setuptools import setup
 
 setup(name='mochad_logger',
-      version='0.0.4',
+      version='0.0.5',
       description='A Logging Utility for Mochad',
       author='Dan Brooks',
       author_email='dan@cs.uml.edu',

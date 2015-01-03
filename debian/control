@@ -1,5 +1,5 @@
 Package: mochad-logger
-Version: 0.0.4
+Version: 0.0.5
 Section: python
 Priority: optional
 Architecture: all
