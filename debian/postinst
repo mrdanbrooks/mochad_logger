@@ -4,4 +4,8 @@
 # initctl reload-configuration
 
 # Trigger Udev
-udevadm control --reload-rules
+# udevadm control --reload-rules
+
+# SysVinit
+chmod 755  /etc/init.d/mochad_logger
+update-rc.d mochad_logger defaults

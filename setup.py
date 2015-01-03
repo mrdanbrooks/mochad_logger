@@ -9,6 +9,7 @@ setup(name='mochad_logger',
       url='http://www.github.com/mrdanbrooks/mochad_logger',
       scripts=['mochad_logger'],
       data_files=[('/etc/mochad_logger',['config/mochad_logger.conf']),
-                  ('/etc/udev/rules.d',['debian/91-mochad-logger.rules'])],
+                  ('/etc/init.d',['debian/mochad_logger.sysvinit'])],
+#                   ('/etc/udev/rules.d',['debian/91-mochad-logger.rules'])],
       install_requires=['twisted']
       )
